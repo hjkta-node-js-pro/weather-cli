@@ -1,24 +1,22 @@
 {
-  "name": "weather-cli",
-  "version": "1.0.0",
-  "description": "Display weather forecast",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hjkta-node-js-pro/weather-cli.git"
-  },
-  "keywords": [
-    "cli",
-    "weather",
-    "nodejs"
-  ],
-  "author": "hjkta",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hjkta-node-js-pro/weather-cli/issues"
-  },
-  "homepage": "https://github.com/hjkta-node-js-pro/weather-cli#readme"
+	"name": "weather-cli",
+	"version": "1.0.0",
+	"description": "Display weather forecast",
+	"main": "weather.js",
+	"bin": {
+		"weather": "weather.js"
+	},
+	"keywords": [
+		"cli",
+		"weather",
+		"nodejs"
+	],
+	"author": "hjkta",
+	"license": "ISC",
+	"type": "module",
+	"devDependencies": {
+		"axios": "^1.0.0",
+		"chalk": "^5.0.1",
+		"dedent-js": "^1.0.1"
+	}
 }
