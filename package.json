@@ -1,5 +1,5 @@
 {
-	"name": "weather-cli",
+	"name": "@hjkta/weather-cli",
 	"version": "1.0.0",
 	"description": "Display weather forecast",
 	"main": "weather.js",
