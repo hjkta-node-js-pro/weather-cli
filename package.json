@@ -11,6 +11,9 @@
 		"weather",
 		"nodejs"
 	],
+	"scripts": {
+		"start": "node weather.js"
+	},
 	"author": "hjkta",
 	"license": "ISC",
 	"type": "module",
