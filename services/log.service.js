@@ -62,7 +62,7 @@ const printWeather = (res) => {
 	}
 
 	console.log(
-		dedent`${chalk.bgBlueBright("WEATHER")} Weather forecast of ${name}:
+		dedent`${chalk.bgBlueBright("WEATHER")} The weather forecast for ${name}:
 		${emojiStatus}  ${weather[0].main}
 		Temperature: ${main.temp} (feels like ${main.feels_like})
 		Humidity: ${main.humidity}%
