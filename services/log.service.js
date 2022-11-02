@@ -9,6 +9,10 @@ const printSuccess = (message) => {
 	console.log(chalk.bgGreen(`SUCCESS: ${message}`));
 };
 
+const printWarning = (message) => {
+	console.log(chalk.bgYellow(`WARNING: ${message}`));
+};
+
 const printHelp = () => {
 	console.log(
 		dedent`${chalk.bgCyan("HELP")}
@@ -67,4 +71,4 @@ const printWeather = (res) => {
 	);
 };
 
-export { printError, printSuccess, printHelp, printWeather };
+export { printError, printSuccess, printHelp, printWeather, printWarning };
