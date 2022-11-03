@@ -19,6 +19,7 @@ const printHelp = () => {
 		Without parameters forecast output
 		-c [CITY] setup city
 		-t [API_KEY] setup API key
+		-l ["en", "ru"] setup language
 		-h output help (this menu)
 		`
 	);
