@@ -16,6 +16,7 @@ const getGeocodes = async (city) => {
 				appid: token,
 				limit: 1,
 			},
+			timeout: 30000,
 		}
 	);
 
@@ -40,6 +41,7 @@ const getWeather = async (city) => {
 				units: "metric",
 				lang: language,
 			},
+			timeout: 30000,
 		}
 	);
 
