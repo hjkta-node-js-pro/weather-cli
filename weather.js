@@ -103,7 +103,6 @@ const initCLI = () => {
 const getForecast = async () => {
 	try {
 		const token = await getKeyValue(TOKEN_DICTIONARY.token);
-
 		if (token === undefined) {
 			printWarning(
 				"The token is not specified. Try to setup token first -t [API_KEY]"
@@ -112,7 +111,6 @@ const getForecast = async () => {
 		}
 
 		const city = await getKeyValue(TOKEN_DICTIONARY.city);
-
 		if (city === undefined) {
 			printWarning(
 				"The city is not specified. Try to setup city -c [CITY_NAME]"
