@@ -1,0 +1,23 @@
+{
+	"messages": {
+		"TOKEN_KEY_MISSING": "The token is not specified. Try to setup token -t [API_KEY]",
+		"TOKEN_KEY_SAVED": "Token has been saved",
+		"TOKEN_INVALID": "The token is not valid. Try to setup token -t [API_KEY]",
+		"CITY_KEY_MISSING": "The city is not specified. Try to setup city -c [CITY_NAME]",
+		"CITY_KEY_SAVED": "City has been saved",
+		"CITY_INVALID": "The city does not exists. Try to setup city -c [CITY_NAME]"
+	},
+	"results": {
+		"TITLE": "The weather forecast for",
+		"TEMP": "Temperature",
+		"FEELS_LIKE": "feels like",
+		"HOMIDITY": "Humidity",
+		"SPEED": "Speed of wind"
+	},
+	"help": {
+		"TEXT": "Without parameters: forecast output\n-t [API_KEY] setup token\n-c [CITY_NAME] setup city\n-l setup language [\"en\", \"ru\"]\n-h output help (this message)"
+	},
+	"language": {
+		"KEY": "en"
+	}
+}
