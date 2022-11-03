@@ -1,6 +1,9 @@
 import chalk from "chalk";
 import dedent from "dedent-js";
 
+import { getKeyValue, TOKEN_DICTIONARY } from "./storage.service.js";
+import { getLangValue } from "./language.service.js";
+
 const printError = (error) => {
 	console.log(chalk.bgRed(`ERROR: ${error}`));
 };
@@ -25,8 +28,9 @@ const printHelp = () => {
 	);
 };
 
-const printWeather = (res) => {
+const printWeather = async (res) => {
 	const { weather, main, wind, name } = res;
+	const language = (await getKeyValue(TOKEN_DICTIONARY.language)) ?? "en";
 	let emojiStatus;
 
 	switch (weather[0].icon.slice(0, -1)) {
@@ -62,12 +66,16 @@ const printWeather = (res) => {
 			break;
 	}
 
+	const resultsLocalized = await getLangValue("results", language);
+
 	console.log(
-		dedent`${chalk.bgBlueBright("WEATHER")} The weather forecast for ${name}:
+		dedent`${chalk.bgBlueBright("WEATHER")} ${resultsLocalized.TITLE} ${name}:
 		${emojiStatus}  ${weather[0].main}
-		Temperature: ${main.temp} (feels like ${main.feels_like})
-		Humidity: ${main.humidity}%
-		Speed of wind: ${wind.speed}
+		${resultsLocalized.TEMP}: ${main.temp} (${resultsLocalized.FEELS_LIKE} ${
+			main.feels_like
+		})
+		${resultsLocalized.HUMIDITY}: ${main.humidity}%
+		${resultsLocalized.SPEED}: ${wind.speed}
 		`
 	);
 };
