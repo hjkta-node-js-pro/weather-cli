@@ -24,6 +24,7 @@ const getGeocodes = async (city) => {
 
 const getWeather = async (city) => {
 	const token = await getKeyValue(TOKEN_DICTIONARY.token);
+	const language = (await getKeyValue(TOKEN_DICTIONARY.language)) ?? "en";
 
 	if (!token) {
 		throw new Error("No valid API key, use -t [API_KEY]");
@@ -37,7 +38,7 @@ const getWeather = async (city) => {
 				lon: city.lon,
 				appid: token,
 				units: "metric",
-				lang: "ru",
+				lang: language,
 			},
 		}
 	);
