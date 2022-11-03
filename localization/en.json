@@ -5,7 +5,10 @@
 		"TOKEN_INVALID": "The token is not valid. Try to setup token -t [API_KEY]",
 		"CITY_KEY_MISSING": "The city is not specified. Try to setup city -c [CITY_NAME]",
 		"CITY_KEY_SAVED": "City has been saved",
-		"CITY_INVALID": "The city does not exists. Try to setup city -c [CITY_NAME]"
+		"CITY_INVALID": "The city does not exists. Try to setup city -c [CITY_NAME]",
+		"LANGUAGE_PARAM_EMPTY": "Language parameter is empty. Try to use -l [\"en\", \"ru\"]",
+		"LANGUAGE_FORMAT_INVALID": "Language parameter is invalid. Try to use one of those [\"en\", \"ru\"]",
+		"LANGUAGE_KEY_SAVED": "The language has been saved"
 	},
 	"results": {
 		"TITLE": "The weather forecast for",
