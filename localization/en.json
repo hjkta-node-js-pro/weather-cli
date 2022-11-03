@@ -14,7 +14,7 @@
 		"TITLE": "The weather forecast for",
 		"TEMP": "Temperature",
 		"FEELS_LIKE": "feels like",
-		"HOMIDITY": "Humidity",
+		"HUMIDITY": "Humidity",
 		"SPEED": "Speed of wind"
 	},
 	"help": {
