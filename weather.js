@@ -119,7 +119,7 @@ const getForecast = async () => {
 		}
 
 		const weather = await getWeather(city);
-		printWeather(weather);
+		await printWeather(weather);
 	} catch (e) {
 		switch (e?.response?.status) {
 			case 404:
