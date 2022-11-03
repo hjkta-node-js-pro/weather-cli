@@ -54,6 +54,26 @@ const saveCity = async (city) => {
 	}
 };
 
+const saveLanguage = async (language) => {
+	if (!language.length) {
+		printError("Language is missing");
+		return;
+	}
+
+	const validLanguageKeys = ["en", "ru"];
+	if (!validLanguageKeys.includes(language)) {
+		printError("Language format is invalid");
+		return;
+	}
+
+	try {
+		await saveKeyValue(TOKEN_DICTIONARY.language, language);
+		printSuccess("Language has been saved");
+	} catch (e) {
+		printError(e.message);
+	}
+};
+
 const initCLI = () => {
 	const args = getArgs(process.argv);
 
@@ -69,6 +89,11 @@ const initCLI = () => {
 
 	if (args.c) {
 		saveCity(args.c);
+		return;
+	}
+
+	if (args.l) {
+		saveLanguage(args.l);
 		return;
 	}
 
